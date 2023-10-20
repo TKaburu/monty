@@ -27,7 +27,7 @@ int run_monty(int argc, char **argv)
 	while (getline(&line, &n, file) == -1)
 	{
 		line_number++;
-		if (arg[0] == "#")
+		if (line[0] == "#")
 			continue;
 		opcode = strtok(point, del);
 		if (opcode == NULL || strlen(opcode) == 0)
